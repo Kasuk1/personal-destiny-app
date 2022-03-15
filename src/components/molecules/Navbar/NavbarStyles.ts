@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const NavbarStyles = styled.nav`
   .navbar {
     height: 6rem;
-    padding: 0 1rem;
 
     display: flex;
     justify-content: center;
