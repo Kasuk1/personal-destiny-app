@@ -17,7 +17,7 @@ export const NavbarStyles = styled.nav`
       color: ${(props) => props.theme.primaryColor};
       font-family: 'Quicksand', sans-serif;
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     &--list {
@@ -49,19 +49,19 @@ export const NavbarStyles = styled.nav`
     }
 
     &--item {
-      color: #fff;
+      color: rgba(255, 255, 255, 0.7);
       font-size: 4rem;
 
       &.active {
-        color: rgba(0, 0, 0, 0.4);
+        color: rgba(255, 255, 255, 1);
       }
 
       @media only screen and (min-width: 37.5em) {
-        color: rgba(0, 0, 0, 0.5);
+        color: rgba(255, 255, 255, 0.7);
         font-size: 1.7rem;
 
         &.active {
-          color: #000;
+          color: rgba(255, 255, 255, 1);
         }
       }
     }
