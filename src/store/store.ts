@@ -1,7 +1,14 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { hotelsApi } from 'services/api/hotels';
+import uiReducer from './ui/uiSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    ui: uiReducer,
+    [hotelsApi.reducerPath]: hotelsApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(hotelsApi.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;
