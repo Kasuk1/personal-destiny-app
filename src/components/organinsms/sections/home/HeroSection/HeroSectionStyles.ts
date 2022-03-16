@@ -8,17 +8,14 @@ export const HeroStyles = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
-  position: relative;
-  bottom: 6rem;
-  z-index: -1;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5rem;
 
   @media only screen and (min-width: 37.5em) {
     height: 80vh;
-    bottom: 8rem;
   }
 
   .hero {
@@ -26,19 +23,29 @@ export const HeroStyles = styled.section`
     width: 100%;
     text-align: center;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
     @media only screen and (min-width: 87.5em) {
       width: 40%;
     }
 
     &--title {
+      box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
       color: #fff;
       font-size: 3rem;
       font-weight: 600;
-      box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+      padding: 2rem 0;
+
+      & span {
+        color: ${(props) => props.theme.primaryColor};
+      }
 
       @media only screen and (min-width: 37.5em) {
         font-size: 5.5rem;
-        padding: 1.5rem 0;
+        padding: 0 2rem;
       }
     }
   }
