@@ -1,3 +1,4 @@
+import { Group } from 'components/organinsms';
 import { useParams } from 'react-router-dom';
 import { useGetLocationsQuery } from 'services/api/hotels';
 
@@ -6,18 +7,16 @@ export const LocationsGroup = () => {
   const { data: locations, isLoading } = useGetLocationsQuery(searchTerm!);
 
   return (
-    <div>
+    <main>
       {isLoading ? (
         <h1>Loading...</h1>
       ) : (
-        <code>
-          {JSON.stringify(
-            locations?.suggestions.filter((sug) => sug.group === 'HOTEL_GROUP'),
-            null,
-            4
-          )}
-        </code>
+        <div>
+          {locations?.suggestions.map((sug) => (
+            <Group {...sug} />
+          ))}
+        </div>
       )}
-    </div>
+    </main>
   );
 };
