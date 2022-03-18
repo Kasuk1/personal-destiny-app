@@ -9,7 +9,10 @@ export const Search: React.FC = () => {
   const navigate = useNavigate();
   const { searchInput } = useAppSelector(selectUiState);
 
-  const navigateToHotelsInfo = () => navigate(`/locations/${searchInput}`);
+  const navigateToHotelsInfo = () => {
+    dispatch(setSearchInput(''));
+    navigate(`/locations/${searchInput}`);
+  };
 
   return (
     <SearchStyles>
@@ -17,7 +20,7 @@ export const Search: React.FC = () => {
         className="search--input"
         type="text"
         value={searchInput}
-        placeholder="Search by location"
+        placeholder="Search by country, city, ..."
         onChange={(e) => dispatch(setSearchInput(e.target.value))}
         onKeyUp={(e) => e.key === 'Enter' && navigateToHotelsInfo()}
       />
