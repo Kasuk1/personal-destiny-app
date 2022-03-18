@@ -14,9 +14,12 @@
     "@types/react-redux": "^7.1.23",
     "@types/styled-components": "^5.1.24",
     "axios": "^0.26.1",
+    "html-react-parser": "^1.4.8",
+    "marked": "^4.0.12",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-markdown": "^8.0.1",
     "react-redux": "^7.2.6",
     "react-responsive": "^9.0.0-beta.6",
     "react-router-dom": "^6.2.2",
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/marked": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
     "eslint": "^8.11.0",

@@ -1,8 +1,8 @@
-import { HeroSection, OurHotelsSection } from 'components/organinsms';
+import { CTASection, HeroSection } from 'components/organinsms';
 
 export const Home: React.FC = () => (
   <main>
     <HeroSection />
-    <OurHotelsSection />
+    <CTASection />
   </main>
 );
