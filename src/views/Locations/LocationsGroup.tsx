@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useGetLocationsQuery } from 'services/api/hotels';
 import { Container } from 'components/atoms';
 import { Group } from 'components/organinsms';
-import { Return, Search } from 'components/molecules';
+import { LocationsGroupLoading, Return, Search } from 'components/molecules';
 import { LocationsGroupStyles } from './LocationsGroupStyles';
 
 export const LocationsGroup = () => {
@@ -22,7 +22,7 @@ export const LocationsGroup = () => {
           <Return to="/" />
 
           {isLoading ? (
-            <h1>Loading...</h1>
+            <LocationsGroupLoading />
           ) : (
             locations?.suggestions.map((suggestion) => (
               <Group key={suggestion.group} {...suggestion} />
