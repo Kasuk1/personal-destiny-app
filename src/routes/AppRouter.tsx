@@ -5,11 +5,14 @@ import { Home, LocationsGroup, Hotels } from 'views';
 export const AppRouter: React.FC = () => (
   <BrowserRouter>
     <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/locations" element={<Hotels />} />
-      <Route path="/locations/:searchTerm" element={<LocationsGroup />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/locations" element={<Hotels />} />
+        <Route path="/locations/:searchTerm" element={<LocationsGroup />} />
+        <Route path="/hotels/:destinationId" element={<Hotels />} />
+      </Routes>
+    </main>
     <Footer />
   </BrowserRouter>
 );

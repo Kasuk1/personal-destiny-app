@@ -1,7 +1,7 @@
 import { HeroImage } from 'assets';
 import styled from 'styled-components';
 
-export const HeroStyles = styled.section`
+export const HeroStyles = styled.header`
   background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.4) 100%),
     url(${HeroImage});
   background-position: center;

@@ -2,7 +2,9 @@ import { useParams } from 'react-router-dom';
 import { useGetLocationsQuery } from 'services/api/hotels';
 import { Container } from 'components/atoms';
 import { Group } from 'components/organinsms';
-import { LocationsGroupLoading, Return, Search } from 'components/molecules';
+import { LocationsGroupLoading, Return } from 'components/molecules';
+import { Header } from 'components/templates';
+import { LocationsImage } from 'assets';
 import { LocationsGroupStyles } from './LocationsGroupStyles';
 
 export const LocationsGroup = () => {
@@ -11,12 +13,10 @@ export const LocationsGroup = () => {
 
   return (
     <LocationsGroupStyles>
-      <div className="locations--background">
-        <h1 className="locations--title">
-          What we are <span>looking</span> now?
-        </h1>
-        <Search />
-      </div>
+      <Header
+        backgroundImageUrl={LocationsImage}
+        title="<h1> What we are <span>looking</span> now?</h1>"
+      />
       <Container>
         <section className="locations--container">
           <Return to="/" />

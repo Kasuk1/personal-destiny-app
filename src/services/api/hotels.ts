@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ILocations } from 'interfaces/hotelsApi';
+import { ILocations, IPropertiesResponse } from 'interfaces/hotelsApi';
 
 export const hotelsApi = createApi({
   reducerPath: 'hotelsApi',
@@ -17,7 +17,12 @@ export const hotelsApi = createApi({
         url: `/locations/v2/search?query=${query}`,
       }),
     }),
+    getProperties: builder.query<IPropertiesResponse, string>({
+      query: (query: string) => ({
+        url: `/properties/list?destinationId=${query}&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD`,
+      }),
+    }),
   }),
 });
 
-export const { useGetLocationsQuery } = hotelsApi;
+export const { useGetLocationsQuery, useGetPropertiesQuery } = hotelsApi;
