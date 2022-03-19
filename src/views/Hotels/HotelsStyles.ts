@@ -10,7 +10,7 @@ export const HotelsStyles = styled.section`
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.8rem;
+      gap: 2rem;
 
       @media only screen and (min-width: 37.5em) {
         align-items: stretch;
@@ -26,6 +26,8 @@ export const HotelsStyles = styled.section`
       font-size: 2rem;
       font-weight: 300;
       text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 6rem;
       width: 100%;
 
       @media only screen and (min-width: 37.5em) {

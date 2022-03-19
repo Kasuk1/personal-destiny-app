@@ -15,7 +15,7 @@ export const HotelStyles = styled.article`
     min-width: 100%;
     height: 14rem;
     flex-direction: row;
-    gap: 2rem;
+    gap: 0.5rem;
   }
 
   @media only screen and (min-width: 87.5em) {
@@ -63,11 +63,22 @@ export const HotelStyles = styled.article`
 
     &--title {
       color: ${(props) => props.theme.primaryColor};
-      font-size: 1.8rem;
+      font-size: 1.85rem;
       font-weight: 500;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+    }
+
+    &--address {
+      font-size: 1.2rem;
+    }
+
+    &--provider {
+      background-color: ${(props) => props.theme.tertiaryColor};
+      color: ${(props) => props.theme.primaryColor};
+      font-weight: 500;
+      padding: 0 0.5rem;
     }
 
     &--rating {

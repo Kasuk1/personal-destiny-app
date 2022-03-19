@@ -13,7 +13,7 @@ export const Entitie: React.FC<IEntitie> = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/hotels/${destinationId}`);
+    if (type !== 'HOTEL') navigate(`/hotels/${destinationId}`);
   };
 
   return (

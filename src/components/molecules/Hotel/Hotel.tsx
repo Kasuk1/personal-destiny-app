@@ -22,7 +22,8 @@ export const Hotel: React.FC<IProperty> = ({
         <div className="hotel--info__header">
           <h3 className="hotel--title">{name}</h3>
           <p className="hotel--address">
-            {streetAddress}, {locality}, {countryName} - {providerType}
+            {streetAddress}, {locality}, {countryName} -{' '}
+            <span className="hotel--provider">{providerType}</span>
           </p>
         </div>
         <p className="hotel--rating">{starRating}</p>

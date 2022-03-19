@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { AiFillHome } from 'react-icons/ai';
-import { MdHotel, MdContactSupport } from 'react-icons/md';
-import { SiAboutdotme } from 'react-icons/si';
+import { MdHotel, MdLocationPin } from 'react-icons/md';
 import { Container } from 'components/atoms';
 import { NavbarStyles } from './NavbarStyles';
 
@@ -30,9 +29,9 @@ export const Navbar: React.FC = () => {
                 className={({ isActive }) =>
                   `navbar--item${isActive ? ' active' : ''}`
                 }
-                to="/hotels"
+                to="/locations/london"
               >
-                {isNotMobile ? 'Hotels' : MdHotel}
+                {isNotMobile ? 'Locations' : MdLocationPin}
               </NavLink>
             </li>
             <li>
@@ -40,12 +39,12 @@ export const Navbar: React.FC = () => {
                 className={({ isActive }) =>
                   `navbar--item${isActive ? ' active' : ''}`
                 }
-                to="/about"
+                to="/hotels/549499"
               >
-                {isNotMobile ? 'About' : SiAboutdotme}
+                {isNotMobile ? 'Hotels' : MdHotel}
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 className={({ isActive }) =>
                   `navbar--item${isActive ? ' active' : ''}`
@@ -54,7 +53,7 @@ export const Navbar: React.FC = () => {
               >
                 {isNotMobile ? 'Contact' : MdContactSupport}
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </Container>

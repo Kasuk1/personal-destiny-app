@@ -1,6 +1,6 @@
 import { HotelsImage } from 'assets';
 import { Container } from 'components/atoms';
-import { Hotel, Return } from 'components/molecules';
+import { Hotel, LocationsGroupLoading, Return } from 'components/molecules';
 import { Header } from 'components/templates';
 import { useParams } from 'react-router-dom';
 import { useGetPropertiesQuery } from 'services/api/hotels';
@@ -22,11 +22,11 @@ export const Hotels = () => {
         <section className="hotels--container">
           <Return to="/" />
           {isLoading ? (
-            <div>Loading...</div>
+            <LocationsGroupLoading />
           ) : (
             <>
               <h2 className="hotels--title">
-                This is what we have in <span>{header}</span>
+                This is what we find in <span>{header}</span>
               </h2>
               {hotels?.map((hotel) => (
                 <Hotel key={hotel.id} {...hotel} />

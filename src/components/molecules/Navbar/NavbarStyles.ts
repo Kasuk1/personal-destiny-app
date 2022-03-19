@@ -61,16 +61,21 @@ export const NavbarStyles = styled.nav`
     }
 
     &--item {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.4);
       font-size: 4rem;
+      transition: all 0.2s;
 
       &.active {
         color: rgba(255, 255, 255, 1);
       }
 
       @media only screen and (min-width: 37.5em) {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.6);
         font-size: 1.7rem;
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
 
         &.active {
           color: rgba(255, 255, 255, 1);
